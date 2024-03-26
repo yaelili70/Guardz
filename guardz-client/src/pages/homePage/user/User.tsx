@@ -15,8 +15,8 @@ export const User = (props: Props) => {
         <Card sx={styles.cardContainer}>
             <CardContent>
                 <Typography sx={styles.title}>{username}</Typography>
-                <Typography>{firstName} {lastName}</Typography>
-                <Typography>{age}</Typography>
+                <Typography sx={styles.text}>{firstName} {lastName}</Typography>
+                <Typography sx={styles.text}>{age}</Typography>
             </CardContent>
         </Card>
     );

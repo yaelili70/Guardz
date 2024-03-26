@@ -14,5 +14,10 @@ export const cardContainer: SxProps = {
 
 export const title: SxProps = {
     fontWeight: 'bold',
-    fontSize: '1.2rem'
+    fontSize: '1.2rem',
+    wordWrap: 'break-word'
+}
+
+export const text: SxProps = {
+    wordWrap: 'break-word'
 }

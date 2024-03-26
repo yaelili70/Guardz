@@ -8,7 +8,7 @@ import { User as UserDto } from "../../types/user";
 import * as styles from "./HomePage.styles";
 
 export const HomePage = () => {
-    const [isNewPostModalOpen, setIsNewPostModalOpen] = useState<boolean>(false);
+    const [isNewUserModalOpen, setIsNewUserModalOpen] = useState<boolean>(false);
 
     const {
         data: users,
@@ -37,19 +37,19 @@ export const HomePage = () => {
             age
         });
 
-        setIsNewPostModalOpen(false)
+        setIsNewUserModalOpen(false)
     }
 
     return (
         <>
             <NewUserModal
-                isOpen={isNewPostModalOpen}
+                isOpen={isNewUserModalOpen}
                 onSave={handleSave}
-                onClose={() => setIsNewPostModalOpen(false)} />
+                onClose={() => setIsNewUserModalOpen(false)} />
             <Box sx={styles.container}>
                 <Box sx={styles.guardzContainer}>
                     <Typography sx={{ fontSize: '4rem' }}>Guardz</Typography>
-                    <Button sx={{}} onClick={() => setIsNewPostModalOpen(true)}>new user</Button>
+                    <Button sx={{}} onClick={() => setIsNewUserModalOpen(true)}>new user</Button>
                 </Box>
                 <Box sx={styles.usersListContainer}>
                     <UsersList users={users || []} isError={isError} isLoading={isLoading}></UsersList>
