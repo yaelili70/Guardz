@@ -8,4 +8,4 @@ COPY package.json /react-docker-client/
 
 RUN npm install
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
